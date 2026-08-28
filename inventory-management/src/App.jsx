@@ -128,6 +128,7 @@ function App() {
               categories={categories}
               onAdd={addProduct}
               onUpdate={updateProduct}
+              onDelete={deleteProduct}
               isSkuTaken={isSkuTaken}
             />
           }

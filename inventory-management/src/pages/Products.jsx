@@ -1,12 +1,36 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import ProductForm from '../components/ProductForm';
+import FilterBar from '../components/FilterBar';
+import ProductTable from '../components/ProductTable';
 import './Products.css';
 
-function Products({ products, categories, onAdd, onUpdate, isSkuTaken }) {
+function Products({ products, categories, onAdd, onUpdate, onDelete, isSkuTaken }) {
 
     const [showForm, setShowForm] = useState(false);
     const [editingProduct, setEditingProduct] = useState(null);
+
+    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('');
+    const [stockFilter, setStockFilter] = useState('');
+
+    const filteredProducts = products.filter((product) => {
+        const query = searchQuery.trim().toLowerCase();
+        const matchesSearch =
+            query === '' ||
+            product.name.toLowerCase().includes(query) ||
+            product.id.toLowerCase().includes(query);
+
+        const matchesCategory =
+            selectedCategory === '' || product.category === selectedCategory;
+
+        const matchesStock =
+            stockFilter === '' ||
+            (stockFilter === 'in' && product.quantity > 0) ||
+            (stockFilter === 'out' && product.quantity === 0);
+
+        return matchesSearch && matchesCategory && matchesStock;
+    });
 
     function openAddForm() {
         setEditingProduct(null);
@@ -32,6 +56,11 @@ function Products({ products, categories, onAdd, onUpdate, isSkuTaken }) {
             toast.success('Product added');
         }
         closeForm();
+    }
+
+    function handleDelete(id) {
+        onDelete(id);
+        toast.success('Product deleted');
     }
 
     return (
@@ -64,14 +93,23 @@ function Products({ products, categories, onAdd, onUpdate, isSkuTaken }) {
             {products.length === 0 ? (
                 <p className="empty">No products yet. Click "Add Product" to start.</p>
             ) : (
-                <ul className="tempList">
-                    {products.map((p) => (
-                        <li key={p.id}>
-                            {p.name} — {p.id} — {p.category} — ${p.price} — Qty: {p.quantity}
-                            <button onClick={() => openEditForm(p)}>Edit</button>
-                        </li>
-                    ))}
-                </ul>
+                <>
+                    <FilterBar
+                        searchQuery={searchQuery}
+                        onSearchChange={setSearchQuery}
+                        categories={categories}
+                        selectedCategory={selectedCategory}
+                        onCategoryChange={setSelectedCategory}
+                        stockFilter={stockFilter}
+                        onStockFilterChange={setStockFilter}
+                    />
+
+                    <ProductTable
+                        products={filteredProducts}
+                        onEdit={openEditForm}
+                        onDelete={handleDelete}
+                    />
+                </>
             )}
         </div>
     );
