@@ -1,6 +1,6 @@
 :root {
-  --color-bg: #F5F5F5;
-  --color-surface: #BBD5DA;
+  --color-bg: #ffffff;
+  --color-surface: #83b8e4;
   --color-form-bg: #DFF1F1;
   --color-form-border: #e2e5ea;
   --color-border: #e2e5ea;
@@ -11,6 +11,10 @@
   --color-btn-bg: #000000;
   --color-btn-hover: #818181;
   --color-btn-text: #ffffff;
+  --color-nav-active: #ffffff;
+  --color-nav-underline: #fafcff;
+  --color-nav-text-active-hover: white;
+  --color-nav-layout-underline-color: #F68048;
   --color-danger: #dc2626;
   --color-success: #16a34a;
   --color-warning: #d97706;
@@ -23,8 +27,8 @@
 }
 
 [data-theme="dark"] {
-  --color-bg: #242425;
-  --color-surface: #000000;
+  --color-bg: #010112;
+  --color-surface: #020216;
   --color-form-bg: #1a1d23;
   --color-form-border: #2d323b;
   --color-border: #2d323b;
@@ -35,6 +39,10 @@
   --color-btn-bg: #ffffff;
   --color-btn-hover: #e2e2e2;
   --color-btn-text: #000000;
+  --color-nav-active: #f4f4f4;
+  --color-nav-underline: #38bdf8;
+  --color-nav-text-active-hover: rgb(255, 255, 255);
+  --color-nav-layout-underline-color: rgb(0, 187, 255);
   --color-danger: #ef4444;
   --color-success: #22c55e;
   --color-warning: #f59e0b;

@@ -5,10 +5,11 @@
 
 .sidebar {
     --layout-brand-color: #ffffff;
-    --layout-text-muted: #94a3b8;
+    --layout-text-muted: #f6f6f6;
     --layout-text-hover: #f8fafc;
-    --layout-text-active: var(--color-primary);
-    --layout-text-active-hover: var(--color-primary-hover);
+    --layout-text-active: var(--color-nav-active);
+    --layout-text-active-hover: var(--color-nav-text-active-hover);
+    --layout-underline-color: var(--color-nav-layout-underline-color);
 
     width: 240px;
     background-color: var(--color-surface);
@@ -37,6 +38,7 @@
 }
 
 .link {
+
     position: relative;
     width: fit-content;
     padding: 10px var(--space-md);
@@ -54,7 +56,7 @@
     left: var(--space-md);
     right: var(--space-md);
     height: 2px;
-    background-color: var(--layout-text-active);
+    background-color: var(--layout-underline-color);
     border-radius: 1px;
     transform: scaleX(0);
     transform-origin: left;
@@ -63,6 +65,7 @@
 
 .link:hover {
     color: var(--layout-text-hover);
+
     transform: scale(1.05);
 }
 
