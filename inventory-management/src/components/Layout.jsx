@@ -7,7 +7,7 @@ export function Layout() {
         <div className={styles.app}>
             <aside className={styles.sidebar}>
                 <div className={styles.brand}>
-                    <h1>Inventory</h1>
+                    <h1>Inventory Management System</h1>
                     {/* <ThemeToggle /> */}
                 </div>
 
