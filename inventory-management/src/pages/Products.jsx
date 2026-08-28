@@ -5,7 +5,7 @@ import FilterBar from '../components/FilterBar';
 import ProductTable from '../components/ProductTable';
 import './Products.css';
 
-function Products({ products, categories, onAdd, onUpdate, onDelete, isSkuTaken }) {
+function Products({ products, categories, onAdd, onUpdate, onAdjustStock, onDelete, isSkuTaken }) {
 
     const [showForm, setShowForm] = useState(false);
     const [editingProduct, setEditingProduct] = useState(null);
@@ -63,6 +63,16 @@ function Products({ products, categories, onAdd, onUpdate, onDelete, isSkuTaken 
         toast.success('Product deleted');
     }
 
+    function handleAdjustStock(productId, type, amount, note) {
+        const result = onAdjustStock(productId, type, amount, note);
+        if (result.success) {
+            toast.success(type === 'IN' ? 'Stock added' : 'Stock removed');
+        } else {
+            toast.error(result.error);
+        }
+        return result;
+    }
+
     return (
         <div>
             <div className="header">
@@ -108,6 +118,7 @@ function Products({ products, categories, onAdd, onUpdate, onDelete, isSkuTaken 
                         products={filteredProducts}
                         onEdit={openEditForm}
                         onDelete={handleDelete}
+                        onAdjustStock={handleAdjustStock}
                     />
                 </>
             )}

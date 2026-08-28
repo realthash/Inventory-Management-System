@@ -93,3 +93,46 @@
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
 }
+
+
+.stockInBtn,
+.stockOutBtn {
+    padding: 4px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.stockInBtn {
+    color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.stockInBtn:hover {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.stockOutBtn {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.stockOutBtn:hover:not(:disabled) {
+    background-color: var(--color-danger);
+    color: white;
+}
+
+.stockOutBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.adjustRow td {
+    background-color: var(--color-bg);
+    padding: 0 var(--space-md) var(--space-md) var(--space-md);
+}

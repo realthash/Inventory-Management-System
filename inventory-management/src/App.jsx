@@ -129,6 +129,7 @@ function App() {
               onAdd={addProduct}
               onUpdate={updateProduct}
               onDelete={deleteProduct}
+              onAdjustStock={adjustStock}
               isSkuTaken={isSkuTaken}
             />
           }
