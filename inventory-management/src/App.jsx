@@ -1,6 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from 'react-router-dom'
 import { KEYS, readFromLocalStorage, saveToLocalStorage } from "./utils/storage";
 import { generateSKU } from "./utils/generator";
+import Layout from "./components/Layout";
+import Dashboard from "./pages/Dashboard";
+import Products from './pages/Products';
+import Categories from './pages/Categories'
 import './App.css';
 
 function App() {
@@ -112,11 +117,13 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Inventory Management</h1>
-      <p>Products: {products.length}</p>
-      <p>Categories: {categories.length}</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="products" element={<Products />} />
+        <Route path="categories" element={<Categories />} />
+      </Route>
+    </Routes>
   );
 }
 
