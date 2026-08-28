@@ -8,7 +8,7 @@ export function Layout() {
             <aside className={styles.sidebar}>
                 <div className={styles.brand}>
                     <h1>Inventory Management System</h1>
-                    <ThemeToggle />
+
                 </div>
 
                 <nav className={styles.nav}>
@@ -46,6 +46,10 @@ export function Layout() {
                         History
                     </NavLink>
                 </nav>
+
+                <div className={styles.sidebarFooter}>
+                    <ThemeToggle />
+                </div>
             </aside>
 
             <main className={styles.main}>

@@ -120,7 +120,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Dashboard />} />
+        <Route
+          index
+          element={<Dashboard products={products} categories={categories} />}
+        />
         <Route
           path="products"
           element={

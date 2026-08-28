@@ -17,9 +17,9 @@
 
 .input {
     padding: 10px 12px;
-    border: 1px solid var(--color-border);
+    background-color: var(--color-table-head);
+    border: 1px solid var(--color-text-muted);
     border-radius: var(--radius);
-    background-color: var(--color-surface);
     color: var(--color-text);
     font-size: 14px;
     width: 100%;
@@ -37,7 +37,7 @@
 
 .submit {
     padding: 10px 20px;
-    background-color: var(--color-primary);
+    background-color: var(--color-btn-bg);
     color: white;
     border: none;
     border-radius: var(--radius);
@@ -48,5 +48,5 @@
 }
 
 .submit:hover {
-    background-color: var(--color-primary-hover);
+    background-color: var(--color-btn-hover);
 }

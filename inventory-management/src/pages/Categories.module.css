@@ -19,9 +19,15 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--space-md);
-    background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-table-row);
 }
 
 .info {

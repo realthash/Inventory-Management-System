@@ -6,24 +6,41 @@
   --color-border: #e2e5ea;
   --color-text: #1a1d21;
   --color-text-muted: #6b7280;
-  --color-primary: #093FB4;
-  --color-primary: #093FB4;
+
+  /* StatCard specific variables */
+  --color-stat-bg: #f4f4f4;
+  --color-stat-border: #e2e5ea;
+  --color-stat-value: #1a1d21;
+  --color-stat-label: #4b5563;
+
+  /* Dashboard Panel specific variables */
+  --color-panel-bg: #ffffff;
+  --color-panel-border: #e2e5ea;
+  --color-panel-title: #1a1d21;
+
+  --color-primary: #4a2e14;
   --color-primary-hover: hsl(0, 0%, 100%);
-  --color-btn-bg: #000000;
-  --color-btn-hover: #818181;
+  --color-btn-bg: #83b8e4;
+  --color-btn-hover: #76a5cc;
   --color-btn-text: #ffffff;
+
   --color-nav-active: #ffffff;
   --color-nav-underline: #fafcff;
   --color-nav-text-active-hover: white;
-  --color-nav-layout-underline-color: #F68048;
+  --color-nav-layout-underline-color: #f3f3f3;
+
+  --color-table-head: #bbdffc;
+  --color-table-row: rgb(233, 233, 233);
+
   --color-danger: #dc2626;
   --color-success: #16a34a;
   --color-warning: #d97706;
 
-  --radius: 8px;
+  --radius: 10px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 24px;
+  --space-elg: 30px;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -35,9 +52,24 @@
   --color-border: #2d323b;
   --color-text: #e8eaed;
   --color-text-muted: #9aa0a6;
+
+  /* StatCard specific variables */
+  --color-stat-bg: #0f172a;
+  --color-stat-border: #1e293b;
+  --color-stat-value: #f8fafc;
+  --color-stat-label: #94a3b8;
+
+  /* Dashboard Panel specific variables */
+  --color-panel-bg: #0f172a;
+  --color-panel-border: #1e293b;
+  --color-panel-title: #f8fafc;
+
+  --color-table-head: #020216;
+  --color-table-row: #272829;
+
   --color-primary: hsl(181, 100%, 75%);
   --color-primary-hover: hsl(0, 0%, 100%);
-  --color-btn-bg: #ffffff;
+  --color-btn-bg: #020216;
   --color-btn-hover: #e2e2e2;
   --color-btn-text: #000000;
   --color-nav-active: #f4f4f4;
