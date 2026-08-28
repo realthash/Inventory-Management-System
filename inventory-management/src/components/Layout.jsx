@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import styles from './Layout.module.css';
-// import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ThemeToggle';
 
 export function Layout() {
     return (
@@ -8,7 +8,7 @@ export function Layout() {
             <aside className={styles.sidebar}>
                 <div className={styles.brand}>
                     <h1>Inventory Management System</h1>
-                    {/* <ThemeToggle /> */}
+                    <ThemeToggle />
                 </div>
 
                 <nav className={styles.nav}>
