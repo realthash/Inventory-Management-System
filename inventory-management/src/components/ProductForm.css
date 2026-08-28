@@ -95,12 +95,15 @@
 }
 
 .submit {
-  background-color: var(--color-btn-bg);
+  background-color: var(--color-submit-btn-bg);
   color: var(--color-btn-text);
   border: 1px solid var(--color-btn-bg);
+  transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
 .submit:hover {
   background-color: var(--color-btn-hover);
   border-color: var(--color-btn-hover);
+  transform: translateY(-1px);
+
 }

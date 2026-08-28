@@ -1,7 +1,7 @@
 :root {
   --color-bg: #ffffff;
   --color-surface: #83b8e4;
-  --color-form-bg: #DFF1F1;
+  --color-form-bg: #bbdffc;
   --color-form-border: #e2e5ea;
   --color-border: #e2e5ea;
   --color-text: #1a1d21;
@@ -21,6 +21,7 @@
   --color-primary: #4a2e14;
   --color-primary-hover: hsl(0, 0%, 100%);
   --color-btn-bg: #83b8e4;
+  --color-submit-btn-bg: #6e9abe;
   --color-btn-hover: #76a5cc;
   --color-btn-text: #ffffff;
 
