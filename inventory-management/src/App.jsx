@@ -135,7 +135,17 @@ function App() {
             />
           }
         />
-        <Route path="categories" element={<Categories />} />
+        <Route
+          path="categories"
+          element={
+            <Categories
+              categories={categories}
+              products={products}
+              onAdd={addCategory}
+              onDelete={deleteCategory}
+            />
+          }
+        />
         <Route
           path="history"
           element={<History stockLogs={stockLogs} />}
