@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import StockAdjustForm from './StockAdjustForm';
 import { formatCurrency } from '../utils/formatCurrency';
 import styles from './ProductTable.module.css';
@@ -48,8 +48,8 @@ function ProductTable({ products, onEdit, onDelete, onAdjustStock }) {
                     {products.map((product) => {
                         const isAdjusting = stockRow?.productId === product.id;
                         return (
-                            <>
-                                <tr key={product.id}>
+                            <Fragment key={product.id}>
+                                <tr >
                                     <td>{product.name}</td>
                                     <td className={styles.mono}>{product.id}</td>
                                     <td>{product.category}</td>
@@ -108,7 +108,7 @@ function ProductTable({ products, onEdit, onDelete, onAdjustStock }) {
                                         </td>
                                     </tr>
                                 )}
-                            </>
+                            </Fragment>
                         );
                     })}
                 </tbody>
