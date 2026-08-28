@@ -69,9 +69,11 @@
 
   --color-primary: hsl(181, 100%, 75%);
   --color-primary-hover: hsl(0, 0%, 100%);
-  --color-btn-bg: #020216;
-  --color-btn-hover: #e2e2e2;
-  --color-btn-text: #000000;
+
+  --color-btn-bg: #ffffff;
+  --color-btn-hover: #d9d9d9;
+  --color-btn-text: #010101;
+
   --color-nav-active: #f4f4f4;
   --color-nav-underline: #38bdf8;
   --color-nav-text-active-hover: rgb(255, 255, 255);

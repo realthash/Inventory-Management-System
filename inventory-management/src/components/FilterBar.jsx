@@ -8,6 +8,8 @@ function FilterBar({
     onCategoryChange,
     stockFilter,
     onStockFilterChange,
+    onAddProduct,
+    showForm,
 }) {
     return (
         <div className={styles.bar}>
@@ -41,6 +43,12 @@ function FilterBar({
                 <option value="in">In Stock</option>
                 <option value="out">Out of Stock</option>
             </select>
+
+            {!showForm && onAddProduct && (
+                <button type="button" className={styles.addBtn} onClick={onAddProduct}>
+                    + Add Product
+                </button>
+            )}
         </div>
     );
 }

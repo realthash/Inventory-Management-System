@@ -38,15 +38,19 @@
 .submit {
     padding: 10px 20px;
     background-color: var(--color-btn-bg);
-    color: white;
+    color: var(--color-btn-text);
     border: none;
+    font-size: 14px;
     border-radius: var(--radius);
     cursor: pointer;
     font-weight: 500;
     white-space: nowrap;
     height: 40px;
+    transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
 .submit:hover {
     background-color: var(--color-btn-hover);
+    transform: translateY(-1px);
+
 }

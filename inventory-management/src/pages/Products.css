@@ -3,6 +3,8 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--color-border);
 }
 
 .addBtn {

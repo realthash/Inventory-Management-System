@@ -8,7 +8,6 @@ export function Layout() {
             <aside className={styles.sidebar}>
                 <div className={styles.brand}>
                     <h1>Inventory Management System</h1>
-
                 </div>
 
                 <nav className={styles.nav}>
@@ -53,6 +52,9 @@ export function Layout() {
             </aside>
 
             <main className={styles.main}>
+                <header className={styles.pageHeader}>
+                    <h1 className={styles.brandTitle}>Inventory Management System</h1>
+                </header>
                 <Outlet />
             </main>
         </div>

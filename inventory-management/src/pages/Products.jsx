@@ -77,11 +77,6 @@ function Products({ products, categories, onAdd, onUpdate, onDelete, onAdjustSto
         <div>
             <div className="header">
                 <h2>Products</h2>
-                {!showForm && (
-                    <button className="addBtn" onClick={openAddForm}>
-                        + Add Product
-                    </button>
-                )}
             </div>
 
             {categories.length === 0 && (
@@ -101,7 +96,14 @@ function Products({ products, categories, onAdd, onUpdate, onDelete, onAdjustSto
             )}
 
             {products.length === 0 ? (
-                <p className="empty">No products yet. Click "Add Product" to start.</p>
+                <div>
+                    {!showForm && (
+                        <button className="addBtn" onClick={openAddForm} style={{ marginBottom: '16px' }}>
+                            + Add Product
+                        </button>
+                    )}
+                    <p className="empty">No products yet. Click "Add Product" to start.</p>
+                </div>
             ) : (
                 <>
                     <FilterBar
@@ -112,6 +114,8 @@ function Products({ products, categories, onAdd, onUpdate, onDelete, onAdjustSto
                         onCategoryChange={setSelectedCategory}
                         stockFilter={stockFilter}
                         onStockFilterChange={setStockFilter}
+                        onAddProduct={openAddForm}
+                        showForm={showForm}
                     />
 
                     <ProductTable
