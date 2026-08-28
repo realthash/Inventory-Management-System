@@ -37,6 +37,14 @@ export function Layout() {
                     >
                         Categories
                     </NavLink>
+                    <NavLink
+                        to="/history"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.link} ${styles.linkActive}` : styles.link
+                        }
+                    >
+                        History
+                    </NavLink>
                 </nav>
             </aside>
 

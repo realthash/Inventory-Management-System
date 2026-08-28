@@ -6,6 +6,7 @@ import Layout from "./components/Layout";
 import Dashboard from "./pages/Dashboard";
 import Products from './pages/Products';
 import Categories from './pages/Categories'
+import History from './pages/History';
 import './App.css';
 
 function App() {
@@ -28,12 +29,12 @@ function App() {
   }, [stockLogs])
 
 
-  // function addLog(entry) {
-  //   setStockLogs((prev) => [
-  //     { id: crypto.randomUUID(), timestamp: new Date().toISOString(), ...entry },
-  //     ...prev,
-  //   ]);
-  // }
+  function addLog(entry) {
+    setStockLogs((prev) => [
+      { id: crypto.randomUUID(), timestamp: new Date().toISOString(), ...entry },
+      ...prev,
+    ]);
+  }
 
   function addProduct(values) {
     const product = {
@@ -47,16 +48,16 @@ function App() {
 
     setProducts((prev) => [product, ...prev]);
 
-    // if (product.quantity > 0) {
-    //   addLog({
-    //     productId: product.id,
-    //     productName: product.name,
-    //     type: 'IN',
-    //     amount: product.quantity,
-    //     newQty: product.quantity,
-    //     note: 'Initial stock',
-    //   });
-    // }
+    if (product.quantity > 0) {
+      addLog({
+        productId: product.id,
+        productName: product.name,
+        type: 'IN',
+        amount: product.quantity,
+        newQty: product.quantity,
+        note: 'Initial stock',
+      });
+    }
   }
 
   function updateProduct(id, values) {
@@ -91,14 +92,14 @@ function App() {
       prev.map((p) => (p.id === productId ? { ...p, quantity: newQty } : p))
     );
 
-    // addLog({
-    //   productId,
-    //   productName: product.name,
-    //   type,
-    //   amount: qty,
-    //   newQty,
-    //   note,
-    // });
+    addLog({
+      productId,
+      productName: product.name,
+      type,
+      amount: qty,
+      newQty,
+      note,
+    });
 
     return { success: true };
   }
@@ -135,6 +136,10 @@ function App() {
           }
         />
         <Route path="categories" element={<Categories />} />
+        <Route
+          path="history"
+          element={<History stockLogs={stockLogs} />}
+        />
       </Route>
     </Routes>
   );
