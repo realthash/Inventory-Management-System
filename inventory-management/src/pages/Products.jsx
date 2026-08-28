@@ -5,7 +5,7 @@ import FilterBar from '../components/FilterBar';
 import ProductTable from '../components/ProductTable';
 import './Products.css';
 
-function Products({ products, categories, onAdd, onUpdate, onAdjustStock, onDelete, isSkuTaken }) {
+function Products({ products, categories, onAdd, onUpdate, onDelete, onAdjustStock, isSkuTaken }) {
 
     const [showForm, setShowForm] = useState(false);
     const [editingProduct, setEditingProduct] = useState(null);

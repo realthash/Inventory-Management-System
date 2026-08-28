@@ -3,8 +3,7 @@ import StockAdjustForm from './StockAdjustForm';
 import { formatCurrency } from '../utils/formatCurrency';
 import styles from './ProductTable.module.css';
 
-function ProductTable({ products, onEdit, onDelete, onAdjustStock, }) {
-
+function ProductTable({ products, onEdit, onDelete, onAdjustStock }) {
     const [stockRow, setStockRow] = useState(null);
 
     if (products.length === 0) {
@@ -16,7 +15,6 @@ function ProductTable({ products, onEdit, onDelete, onAdjustStock, }) {
             onDelete(product.id);
         }
     }
-
 
     function openStockForm(productId, type) {
         setStockRow({ productId, type });
@@ -117,7 +115,6 @@ function ProductTable({ products, onEdit, onDelete, onAdjustStock, }) {
             </table>
         </div>
     );
-
 }
 
 export default ProductTable;

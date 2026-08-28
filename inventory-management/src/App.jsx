@@ -104,35 +104,23 @@ function App() {
     return { success: true };
   }
 
-  // function addCategory(name) {
-  //   setCategories((prev) => [...prev, name]);
-  // }
+  function addCategory(name) {
+    setCategories((prev) => [...prev, name]);
+  }
 
-  // function deleteCategory(name) {
-  //   const inUse = products.filter((p) => p.category === name).length;
-  //   if (inUse > 0) {
-  //     return { success: false, error: `${inUse} product(s) still use this category.` };
-  //   }
-  //   setCategories((prev) => prev.filter((c) => c !== name));
-  //   return { success: true };
-  // }
+  function deleteCategory(name) {
+    const inUse = products.filter((p) => p.category === name).length;
+    if (inUse > 0) {
+      return { success: false, error: `${inUse} product(s) still use this category.` };
+    }
+    setCategories((prev) => prev.filter((c) => c !== name));
+    return { success: true };
+  }
 
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Dashboard />} />
-        <Route
-          path="products"
-          element={
-            <Products
-              products={products}
-              categories={categories}
-              onAdd={addProduct}
-              onUpdate={updateProduct}
-              isSkuTaken={isSkuTaken}
-            />
-          }
-        />
         <Route
           path="products"
           element={
