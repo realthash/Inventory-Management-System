@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from 'react-router-dom'
 import { KEYS, readFromLocalStorage, saveToLocalStorage } from "./utils/storage";
-import { generateSKU } from "./utils/generator";
+import { generateSku } from "./utils/generator";
 import Layout from "./components/Layout";
 import Dashboard from "./pages/Dashboard";
 import Products from './pages/Products';
@@ -37,7 +37,7 @@ function App() {
 
   function addProduct(values) {
     const product = {
-      id: values.id || generateSKU(),
+      id: values.id || generateSku(),
       name: values.name,
       category: values.category,
       price: Number(values.price),
@@ -120,7 +120,18 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Dashboard />} />
-        <Route path="products" element={<Products />} />
+        <Route
+          path="products"
+          element={
+            <Products
+              products={products}
+              categories={categories}
+              onAdd={addProduct}
+              onUpdate={updateProduct}
+              isSkuTaken={isSkuTaken}
+            />
+          }
+        />
         <Route path="categories" element={<Categories />} />
       </Route>
     </Routes>
