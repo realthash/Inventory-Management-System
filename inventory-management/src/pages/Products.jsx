@@ -127,4 +127,5 @@ function Products({ products, categories, onAdd, onUpdate, onAdjustStock, onDele
 }
 
 
+
 export default Products;
