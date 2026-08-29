@@ -1,9 +1,10 @@
 .wrapper {
   background-color: var(--color-form-bg);
-  border: 1px solid var(--color-form-border);
+  border: 3px solid black;
   border-radius: var(--radius);
   padding: var(--space-lg);
   margin-bottom: var(--space-lg);
+  box-shadow: 6px 6px 0px 0px #000000;
 }
 
 .title {
@@ -33,12 +34,14 @@
 .group input,
 .group select {
   padding: 10px 12px;
-  border: 1px solid var(--color-border);
+  border: 2px solid black;
   border-radius: var(--radius);
   background-color: var(--color-bg);
   color: var(--color-text);
   font-size: 14px;
   width: 100%;
+  box-shadow: none;
+  transition: border-color 0.15s ease;
 }
 
 .group input:focus,
@@ -58,13 +61,26 @@
 
 .generateBtn {
   padding: 0 var(--space-md);
-  border: 1px solid var(--color-border);
+  border: 2px solid black;
   border-radius: var(--radius);
   background-color: var(--color-bg);
   color: var(--color-text);
   cursor: pointer;
   white-space: nowrap;
   font-size: 13px;
+  font-weight: 500;
+  box-shadow: 3px 3px 0px 0px #000000;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.generateBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+.generateBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #000000;
 }
 
 .error {
@@ -85,25 +101,40 @@
   border-radius: var(--radius);
   cursor: pointer;
   font-size: 14px;
-  font-weight: 500;
-  border: 1px solid var(--color-border);
+  font-weight: 600;
+  border: 2px solid black;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
 .cancel {
   background-color: var(--color-bg);
   color: var(--color-text);
+  box-shadow: 3px 3px 0px 0px #000000;
+}
+
+.cancel:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+.cancel:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #000000;
 }
 
 .submit {
   background-color: var(--color-submit-btn-bg);
   color: var(--color-btn-text);
-  border: 1px solid var(--color-btn-bg);
-  transition: background-color 0.15s ease, transform 0.15s ease;
+  box-shadow: 3px 3px 0px 0px #000000;
 }
 
 .submit:hover {
   background-color: var(--color-btn-hover);
-  border-color: var(--color-btn-hover);
-  transform: translateY(-1px);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px 0px #000000;
+}
 
+.submit:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px 0px #000000;
 }

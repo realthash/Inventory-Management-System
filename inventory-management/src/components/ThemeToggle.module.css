@@ -1,29 +1,37 @@
 .toggle {
-    background: none;
-    border: none;
+    background-color: var(--color-bg);
+    border: 2px solid black;
     border-radius: var(--radius);
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transition: background-color 0.15s ease, border-color 0.15s ease; */
+    box-shadow: 3px 3px 0px 0px #000000;
+    transform: translate(0, 0);
+    transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* .toggle:hover {
-    background-color: var(--color-bg);
-} */
+.toggle:hover {
+    background-color: var(--color-table-head);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px 0px #000000;
+}
+
+.toggle:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px 0px #000000;
+}
 
 .moonIcon {
-    color: #ffffff;
+    color: var(--color-text);
     transition: transform 0.2s ease;
-
 }
 
 .sunIcon {
-    color: #ffffff;
+    color: var(--color-text);
     transition: transform 0.2s ease;
 }
 

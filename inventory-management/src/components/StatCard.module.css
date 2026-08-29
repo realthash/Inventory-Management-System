@@ -1,32 +1,43 @@
 .card {
+    --tone-color: var(--color-primary);
     padding: var(--space-elg);
     background-color: var(--color-stat-bg);
-    border: 1px solid var(--color-stat-border);
+    border: 3px solid var(--tone-color);
     border-radius: var(--radius);
-    border-left: 4px solid var(--color-stat-border);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    box-shadow: var(--shadow);
+    box-shadow: 6px 6px 0px 0px var(--tone-color);
+    transform: translate(0, 0);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px 0px var(--tone-color);
+}
+
+.card:active {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0px 0px var(--tone-color);
 }
 
 .default {
-    border-left-color: var(--color-primary);
+    --tone-color: var(--color-primary);
 }
 
 .success {
-    border-left-color: var(--color-success);
+    --tone-color: var(--color-success);
 }
 
 .warning {
-    border-left-color: var(--color-warning);
+    --tone-color: var(--color-warning);
 }
 
 .danger {
-    border-left-color: var(--color-danger);
+    --tone-color: var(--color-danger);
 }
 
 .value {

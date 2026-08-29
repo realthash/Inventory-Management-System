@@ -1,9 +1,10 @@
 .wrapper {
     background-color: var(--color-bg);
-    border: 1px solid var(--color-border);
+    border: 2px solid black;
     border-radius: var(--radius);
     padding: var(--space-md);
     margin-top: var(--space-sm);
+    box-shadow: 4px 4px 0px 0px #000000;
 }
 
 .title {
@@ -44,16 +45,19 @@
 
 .group input {
     padding: 8px 12px;
-    border: 1px solid var(--color-border);
+    border: 2px solid black;
     border-radius: var(--radius);
     background-color: var(--color-surface);
     color: var(--color-text);
     font-size: 14px;
+    box-shadow: 3px 3px 0px 0px #000000;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .group input:focus {
     outline: none;
-    border-color: var(--color-primary);
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0px 0px #000000;
 }
 
 .error {
@@ -69,23 +73,38 @@
 
 .cancel {
     padding: 8px 16px;
-    border: 1px solid var(--color-border);
+    border: 2px solid black;
     border-radius: var(--radius);
     background: none;
     color: var(--color-text);
     cursor: pointer;
     font-size: 13px;
+    font-weight: 500;
+    box-shadow: 2px 2px 0px 0px #000000;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cancel:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.cancel:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px 0px #000000;
 }
 
 .submitIn,
 .submitOut {
     padding: 8px 16px;
-    border: none;
+    border: 2px solid black;
     border-radius: var(--radius);
     cursor: pointer;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
+    box-shadow: 2px 2px 0px 0px #000000;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .submitIn {
@@ -94,6 +113,18 @@
 
 .submitOut {
     background-color: var(--color-danger);
+}
+
+.submitIn:hover,
+.submitOut:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.submitIn:active,
+.submitOut:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px 0px #000000;
 }
 
 @media (max-width: 640px) {

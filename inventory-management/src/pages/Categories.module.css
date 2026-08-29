@@ -21,15 +21,18 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--space-md);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    border: 3px solid black;
     border-radius: var(--radius);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    box-shadow: var(--shadow);
+    box-shadow: 5px 5px 0px 0px #000000;
+    transform: translate(0, 0);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
 .item:hover {
-    transform: translateY(-2px);
     background-color: var(--color-table-row);
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px 0px #000000;
 }
 
 .info {
@@ -51,17 +54,27 @@
 
 .deleteBtn {
     padding: 6px 14px;
-    border: 1px solid var(--color-danger);
+    border: 2px solid black;
     border-radius: var(--radius);
     background: none;
     color: var(--color-danger);
     cursor: pointer;
     font-size: 13px;
+    font-weight: 600;
+    box-shadow: 2px 2px 0px 0px #000000;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
 }
 
 .deleteBtn:hover:not(:disabled) {
     background-color: var(--color-danger);
     color: white;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.deleteBtn:active:not(:disabled) {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px 0px #000000;
 }
 
 .deleteBtn:disabled {

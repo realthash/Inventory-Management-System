@@ -18,14 +18,16 @@
   --color-panel-border: #e2e5ea;
   --color-panel-title: #1a1d21;
 
-  --color-primary: #4a2e14;
+  --color-primary: #ffa149;
   --color-primary-hover: hsl(0, 0%, 100%);
   --color-btn-bg: #83b8e4;
   --color-submit-btn-bg: #6e9abe;
   --color-btn-hover: #76a5cc;
   --color-btn-text: #ffffff;
 
-  --color-nav-active: #ffffff;
+  --color-nav-active: #000000;
+  --color-nav-link: white;
+  --color-nav-link-text: black;
   --color-nav-underline: #fafcff;
   --color-nav-text-active-hover: white;
   --color-nav-layout-underline-color: #f3f3f3;
@@ -77,6 +79,8 @@
 
   --color-nav-active: #f4f4f4;
   --color-nav-underline: #38bdf8;
+  --color-nav-link: white;
+  --color-nav-link-text: black;
   --color-nav-text-active-hover: rgb(255, 255, 255);
   --color-nav-layout-underline-color: rgb(0, 187, 255);
   --color-danger: #ef4444;
