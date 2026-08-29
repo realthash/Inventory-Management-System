@@ -22,17 +22,17 @@
     justify-content: space-between;
     padding: var(--space-md);
     background-color: var(--color-bg);
-    border: 3px solid black;
+    border: 3px solid var(--color-border-3d);
     border-radius: var(--radius);
-    box-shadow: 5px 5px 0px 0px #000000;
+    box-shadow: 5px 5px 0px 0px var(--color-shadow-3d);
     transform: translate(0, 0);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .item:hover {
     background-color: var(--color-table-row);
     transform: translate(-2px, -2px);
-    box-shadow: 7px 7px 0px 0px #000000;
+    box-shadow: 7px 7px 0px 0px var(--color-shadow-3d);
 }
 
 .info {
@@ -54,27 +54,27 @@
 
 .deleteBtn {
     padding: 6px 14px;
-    border: 2px solid black;
+    border: 2px solid var(--color-border-3d);
     border-radius: var(--radius);
     background: none;
     color: var(--color-danger);
     cursor: pointer;
     font-size: 13px;
     font-weight: 600;
-    box-shadow: 2px 2px 0px 0px #000000;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+    box-shadow: 2px 2px 0px 0px var(--color-shadow-3d);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .deleteBtn:hover:not(:disabled) {
     background-color: var(--color-danger);
     color: white;
     transform: translate(-1px, -1px);
-    box-shadow: 4px 4px 0px 0px #000000;
+    box-shadow: 4px 4px 0px 0px var(--color-shadow-3d);
 }
 
 .deleteBtn:active:not(:disabled) {
     transform: translate(1px, 1px);
-    box-shadow: 1px 1px 0px 0px #000000;
+    box-shadow: 1px 1px 0px 0px var(--color-shadow-3d);
 }
 
 .deleteBtn:disabled {

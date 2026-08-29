@@ -1,6 +1,9 @@
 .app {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -12,12 +15,30 @@
     --layout-underline-color: var(--color-nav-layout-underline-color);
 
     width: 240px;
+    height: 100%;
+    flex-shrink: 0;
     background-color: var(--color-surface);
-    border-right: 5px solid black;
+    border-right: 5px solid var(--color-border-3d);
     padding: var(--space-lg) var(--space-md);
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border-radius: 3px;
 }
 
 .brand {
@@ -32,10 +53,10 @@
 .pageHeader {
     margin-bottom: var(--space-lg);
     background-color: var(--color-surface);
-    border: 3px solid black;
+    border: 3px solid var(--color-border-3d);
     border-radius: var(--radius);
     padding: var(--space-md) var(--space-lg);
-    box-shadow: 6px 6px 0px 0px #000000;
+    box-shadow: 6px 6px 0px 0px var(--color-shadow-3d);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +66,7 @@
 .brandTitle {
     font-size: 32px;
     font-weight: 800;
-    color: var(--color-text);
+    color: white;
     margin: 0;
     text-align: center;
 }
@@ -71,29 +92,29 @@
     color: var(--color-nav-link-text);
     text-decoration: none;
     font-weight: 600;
-    border: 2px solid black;
-    background-color: var(--color-bg);
-    box-shadow: 3px 3px 0px 0px #000000;
+    border: 2px solid var(--color-border-3d);
+    background-color: var(--color-nav-bg);
+    box-shadow: 3px 3px 0px 0px var(--color-shadow-3d);
     transform: translate(0, 0);
-    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .link:hover {
     color: var(--layout-text-hover);
     background-color: var(--color-surface);
     transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0px 0px #000000;
+    box-shadow: 5px 5px 0px 0px var(--color-shadow-3d);
 }
 
 .link:active {
     transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0px 0px #000000;
+    box-shadow: 1px 1px 0px 0px var(--color-shadow-3d);
 }
 
 .linkActive {
     color: var(--layout-text-active);
-    background-color: var(--color-table-head);
-    box-shadow: 4px 4px 0px 0px #000000;
+    background-color: var(--color-nav-active-bg);
+    box-shadow: 4px 4px 0px 0px var(--color-shadow-3d);
 }
 
 .linkActive:hover {
@@ -102,27 +123,53 @@
 
 .main {
     flex: 1;
+    height: 100%;
+    min-width: 0;
     padding: var(--space-lg);
     overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+}
+
+.main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border-radius: 4px;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-text-muted);
 }
 
 /* Mobile */
 @media (max-width: 640px) {
     .app {
         flex-direction: column;
-        min-height: 100vh;
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
     }
 
     .sidebar {
         width: 100%;
+        height: auto;
+        flex-shrink: 0;
         border-right: none;
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid var(--color-border-3d);
         padding: var(--space-md);
         gap: var(--space-md);
-        box-shadow: 0 4px 0px 0px #000000;
-        position: sticky;
-        top: 0;
+        box-shadow: 0 4px 0px 0px var(--color-shadow-3d);
+        position: static;
         z-index: 100;
+        overflow-y: visible;
     }
 
     .brand {
@@ -130,10 +177,10 @@
         align-items: center;
         justify-content: center;
         background-color: white;
-        border: 3px solid black;
+        border: 3px solid var(--color-border-3d);
         border-radius: var(--radius);
         padding: 10px var(--space-md);
-        box-shadow: 4px 4px 0px 0px #000000;
+        box-shadow: 4px 4px 0px 0px var(--color-shadow-3d);
         text-align: center;
     }
 
@@ -179,6 +226,9 @@
     }
 
     .main {
+        flex: 1;
+        min-height: 0;
         padding: var(--space-md);
+        overflow-y: auto;
     }
-}
+}

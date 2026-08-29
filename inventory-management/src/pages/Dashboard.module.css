@@ -19,11 +19,11 @@
 
 .panel {
     background-color: var(--color-panel-bg);
-    border: 3px solid black;
+    border: 3px solid var(--color-border-3d);
     border-radius: var(--radius);
     padding: var(--space-lg);
     /* Solid 3D box underneath */
-    box-shadow: 6px 6px 0px 0px #000000;
+    box-shadow: 6px 6px 0px 0px var(--color-shadow-3d);
     transform: translate(0, 0);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -31,13 +31,13 @@
 .panel:hover {
     /* Pops up more / solid shadow gets thicker */
     transform: translate(-3px, -3px);
-    box-shadow: 9px 9px 0px 0px #000000;
+    box-shadow: 9px 9px 0px 0px var(--color-shadow-3d);
 }
 
 .panel:active {
     /* Pressed down into the solid box */
     transform: translate(4px, 4px);
-    box-shadow: 2px 2px 0px 0px #000000;
+    box-shadow: 2px 2px 0px 0px var(--color-shadow-3d);
 }
 
 

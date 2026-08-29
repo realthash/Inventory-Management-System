@@ -1,9 +1,9 @@
 .tableWrapper {
     background-color: var(--color-surface);
-    border: 3px solid black;
+    border: 3px solid var(--color-border-3d);
     border-radius: var(--radius);
     overflow-x: auto;
-    box-shadow: 6px 6px 0px 0px #000000;
+    box-shadow: 6px 6px 0px 0px var(--color-shadow-3d);
 }
 
 .table {

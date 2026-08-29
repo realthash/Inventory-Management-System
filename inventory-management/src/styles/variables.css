@@ -26,6 +26,8 @@
   --color-btn-text: #ffffff;
 
   --color-nav-active: #000000;
+  --color-nav-bg: #ffffff;
+  --color-nav-active-bg: #bbdffc;
   --color-nav-link: white;
   --color-nav-link-text: black;
   --color-nav-underline: #fafcff;
@@ -39,6 +41,9 @@
   --color-success: #16a34a;
   --color-warning: #d97706;
 
+  --color-shadow-3d: #000000;
+  --color-border-3d: #000000;
+
   --radius: 10px;
   --space-sm: 8px;
   --space-md: 16px;
@@ -51,8 +56,8 @@
   --color-bg: #010112;
   --color-surface: #020216;
   --color-form-bg: #1a1d23;
-  --color-form-border: #2d323b;
-  --color-border: #2d323b;
+  --color-form-border: #38bdf8;
+  --color-border: #38bdf8;
   --color-text: #e8eaed;
   --color-text-muted: #9aa0a6;
 
@@ -64,7 +69,7 @@
 
   /* Dashboard Panel specific variables */
   --color-panel-bg: #0f172a;
-  --color-panel-border: #1e293b;
+  --color-panel-border: #38bdf8;
   --color-panel-title: #f8fafc;
 
   --color-table-head: #020216;
@@ -78,13 +83,17 @@
   --color-btn-text: #010101;
 
   --color-nav-active: #f4f4f4;
+  --color-nav-bg: #101e39;
+  --color-nav-active-bg: #203b72;
   --color-nav-underline: #38bdf8;
   --color-nav-link: white;
-  --color-nav-link-text: black;
+  --color-nav-link-text: rgb(252, 252, 252);
   --color-nav-text-active-hover: rgb(255, 255, 255);
   --color-nav-layout-underline-color: rgb(0, 187, 255);
   --color-danger: #ef4444;
   --color-success: #22c55e;
   --color-warning: #f59e0b;
+  --color-shadow-3d: #38bdf8;
+  --color-border-3d: #38bdf8;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }

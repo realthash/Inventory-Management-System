@@ -1,10 +1,10 @@
 .wrapper {
     background-color: var(--color-bg);
-    border: 2px solid black;
+    border: 2px solid var(--color-border-3d);
     border-radius: var(--radius);
     padding: var(--space-md);
     margin-top: var(--space-sm);
-    box-shadow: 4px 4px 0px 0px #000000;
+    box-shadow: 4px 4px 0px 0px var(--color-shadow-3d);
 }
 
 .title {
@@ -45,19 +45,19 @@
 
 .group input {
     padding: 8px 12px;
-    border: 2px solid black;
+    border: 2px solid var(--color-border-3d);
     border-radius: var(--radius);
     background-color: var(--color-surface);
     color: var(--color-text);
     font-size: 14px;
-    box-shadow: 3px 3px 0px 0px #000000;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 3px 3px 0px 0px var(--color-shadow-3d);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .group input:focus {
     outline: none;
     transform: translate(-1px, -1px);
-    box-shadow: 5px 5px 0px 0px #000000;
+    box-shadow: 5px 5px 0px 0px var(--color-shadow-3d);
 }
 
 .error {
@@ -73,38 +73,38 @@
 
 .cancel {
     padding: 8px 16px;
-    border: 2px solid black;
+    border: 2px solid var(--color-border-3d);
     border-radius: var(--radius);
     background: none;
     color: var(--color-text);
     cursor: pointer;
     font-size: 13px;
     font-weight: 500;
-    box-shadow: 2px 2px 0px 0px #000000;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 2px 2px 0px 0px var(--color-shadow-3d);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .cancel:hover {
     transform: translate(-1px, -1px);
-    box-shadow: 4px 4px 0px 0px #000000;
+    box-shadow: 4px 4px 0px 0px var(--color-shadow-3d);
 }
 
 .cancel:active {
     transform: translate(1px, 1px);
-    box-shadow: 1px 1px 0px 0px #000000;
+    box-shadow: 1px 1px 0px 0px var(--color-shadow-3d);
 }
 
 .submitIn,
 .submitOut {
     padding: 8px 16px;
-    border: 2px solid black;
+    border: 2px solid var(--color-border-3d);
     border-radius: var(--radius);
     cursor: pointer;
     font-size: 13px;
     font-weight: 600;
     color: white;
-    box-shadow: 2px 2px 0px 0px #000000;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 2px 2px 0px 0px var(--color-shadow-3d);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .submitIn {
@@ -118,13 +118,13 @@
 .submitIn:hover,
 .submitOut:hover {
     transform: translate(-1px, -1px);
-    box-shadow: 4px 4px 0px 0px #000000;
+    box-shadow: 4px 4px 0px 0px var(--color-shadow-3d);
 }
 
 .submitIn:active,
 .submitOut:active {
     transform: translate(1px, 1px);
-    box-shadow: 1px 1px 0px 0px #000000;
+    box-shadow: 1px 1px 0px 0px var(--color-shadow-3d);
 }
 
 @media (max-width: 640px) {
