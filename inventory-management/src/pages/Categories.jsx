@@ -1,5 +1,5 @@
 import toast from 'react-hot-toast';
-import CategoryForm from '../components/CategoryForm';
+import CategoryForm from '../components/categories/CategoryForm';
 import styles from './Categories.module.css';
 
 function Categories({ categories, products, onAdd, onDelete }) {

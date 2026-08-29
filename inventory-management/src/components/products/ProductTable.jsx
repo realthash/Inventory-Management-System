@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import StockAdjustForm from './StockAdjustForm';
-import { formatCurrency } from '../utils/formatCurrency';
+import { formatCurrency } from '../../utils/formatCurrency';
 import styles from './ProductTable.module.css';
 
 function ProductTable({ products, onEdit, onDelete, onAdjustStock }) {

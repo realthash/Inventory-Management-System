@@ -1,4 +1,4 @@
-import StatCard from '../components/StatCard';
+import StatCard from '../components/common/StatCard';
 import { formatCurrency } from '../utils/formatCurrency';
 import styles from './Dashboard.module.css';
 

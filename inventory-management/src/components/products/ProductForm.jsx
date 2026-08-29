@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { generateSku } from '../utils/generator';
+import { generateSku } from '../../utils/generator';
 import './ProductForm.css';
 
 function ProductForm({ categories, onSubmit, onCancel, initialProduct, isSkuTaken }) {

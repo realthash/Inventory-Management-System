@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from 'react-router-dom'
 import { KEYS, readFromLocalStorage, saveToLocalStorage } from "./utils/storage";
 import { generateSku } from "./utils/generator";
-import Layout from "./components/Layout";
+import Layout from "./components/layout/Layout";
 import Dashboard from "./pages/Dashboard";
 import Products from './pages/Products';
 import Categories from './pages/Categories'

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import ProductForm from '../components/ProductForm';
-import FilterBar from '../components/FilterBar';
-import ProductTable from '../components/ProductTable';
+import ProductForm from '../components/products/ProductForm';
+import FilterBar from '../components/common/FilterBar';
+import ProductTable from '../components/products/ProductTable';
 import './Products.css';
 
 function Products({ products, categories, onAdd, onUpdate, onDelete, onAdjustStock, isSkuTaken }) {

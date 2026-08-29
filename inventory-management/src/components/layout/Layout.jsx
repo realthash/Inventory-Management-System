@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import styles from './Layout.module.css';
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from '../common/ThemeToggle';
 
 export function Layout() {
     return (
