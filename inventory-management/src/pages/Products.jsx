@@ -98,7 +98,7 @@ function Products({ products, categories, onAdd, onUpdate, onDelete, onAdjustSto
             {products.length === 0 ? (
                 <div>
                     {!showForm && (
-                        <button className="addBtn" onClick={openAddForm} style={{ marginBottom: '16px' }}>
+                        <button className="addBtn" onClick={openAddForm}>
                             + Add Product
                         </button>
                     )}
