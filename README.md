@@ -19,7 +19,6 @@ The Inventory Management System (IMS) is designed to streamline stock control an
 
 ### Key Highlights
 
-- **Zero-Backend Architecture:** Instant setup with all products, categories, transaction history, and user settings saved securely in the browser.
 - **Data Integrity and Validation:** Comprehensive client-side validation using Formik and Yup prevents invalid product entries, negative quantities, and conflicting records.
 - **Referential Integrity:** Prevents accidental deletion of categories currently assigned to active products.
 - **Audit Traceability:** Maintains a complete chronological record of all inbound (restock) and outbound (sale) stock movements.
