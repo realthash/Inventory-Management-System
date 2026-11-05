@@ -27,6 +27,15 @@ The Inventory Management System (IMS) is designed to streamline stock control an
 
 ---
 
+### 🛠️ Tech Stack
+- **Frontend Framework:** React 19 + Vite
+- **Routing:** React Router v7
+- **Form Management & Validation:** Formik, Yup
+- **Styling:** CSS Modules & Custom CSS Variables (Responsive + Theming)
+- **Data Persistence:** LocalStorage API
+
+---
+
 ## List of Features Implemented
 
 ### 1. Interactive Dashboard and Analytics
